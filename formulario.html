@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calificaciones</title>
+</head>
+<body>
+
+    <h1>Calificaciones</h1>
+
+    <h2>Tareas</h2>
+    Tarea 1: <input type="number" id="tarea1"> <br><br>
+    Tarea 2: <input type="number" id="tarea2"> <br><br>
+    Tarea 3: <input type="number" id="tarea3"> <br><br>
+    Tarea 4: <input type="number" id="tarea4"> <br><br>
+    Tarea 5: <input type="number" id="tarea5"> <br><br>
+
+    <h2>Ejercicios</h2>
+    Ejercicio 1: <input type="number" id="ejercicio1"> <br><br>
+    Ejercicio 2: <input type="number" id="ejercicio2"> <br><br>
+    Ejercicio 3: <input type="number" id="ejercicio3"> <br><br>
+    Ejercicio 4: <input type="number" id="ejercicio4"> <br><br>
+    Ejercicio 5: <input type="number" id="ejercicio5"> <br><br>
+    Ejercicio 6: <input type="number" id="ejercicio6"> <br><br>
+
+    <h2>Examen</h2>
+    Examen: <input type="number" id="examen"> <br><br>
+
+    <button onclick="calcular()">Calcular</button>
+
+    <h2>Resultado: <span id="resultado">---</span></h2>
+
+    <script>
+        function calcular() {
+            let t1 = Number(document.getElementById("tarea1").value)
+            let t2 = Number(document.getElementById("tarea2").value)
+            let t3 = Number(document.getElementById("tarea3").value)
+            let t4 = Number(document.getElementById("tarea4").value)
+            let t5 = Number(document.getElementById("tarea5").value)
+
+            let e1 = Number(document.getElementById("ejercicio1").value)
+            let e2 = Number(document.getElementById("ejercicio2").value)
+            let e3 = Number(document.getElementById("ejercicio3").value)
+            let e4 = Number(document.getElementById("ejercicio4").value)
+            let e5 = Number(document.getElementById("ejercicio5").value)
+            let e6 = Number(document.getElementById("ejercicio6").value)
+
+            let examen = Number(document.getElementById("examen").value)
+
+            let promedioTareas = (t1 + t2 + t3 + t4 + t5) / 5
+            let promedioEjercicios = (e1 + e2 + e3 + e4 + e5 + e6) / 6
+
+            let resultado = (promedioTareas + promedioEjercicios + examen) / 3
+
+            document.getElementById("resultado").textContent = resultado.toFixed(2)
+        }
+    </script>
+
+</body>
+</html>
+
+//Ejercicio 1 — Variables
+// Declara tres variables: una con tu nombre, una con tu edad
+// y una con tu ciudad. Imprime un mensaje como:
+// "Me llamo [nombre], tengo [edad] años y vivo en [ciudad]"
+
+
+var nombre = "Jaret"
+var edad = 22 
+var ciudad = "Cancun" 
+
+console.log ("Me llamo ${nombre}, tengo ${edad} años y vivo en ${cuidad} " )
